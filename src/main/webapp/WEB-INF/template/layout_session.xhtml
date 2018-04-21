@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+
+<h:head>	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<title><ui:insert name="title">Layout</ui:insert></title>
+	
+	
+	<!-- Bootstrap CSS -->
+	<h:outputStylesheet name="bootstrap/css/bootstrap.min.css"/>
+		
+</h:head>
+
+<h:body>
+			
+	<ui:insert name="menu" >
+      <ui:include src="menu_session.xhtml" />
+   	</ui:insert> 	
+	
+	<ui:insert name="content"></ui:insert>
+
+
+	<!-- jQuery first, then Bootstrap JS -->	
+	<h:outputScript name="jquery/jquery.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<h:outputScript name="bootstrap/js/bootstrap.min.js" />
+
+	
+	<ui:insert name="css_custom"></ui:insert>
+
+</h:body>
+</html>

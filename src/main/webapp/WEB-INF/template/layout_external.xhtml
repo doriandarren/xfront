@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+
+<h:head>	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<title><ui:insert name="title">Layout</ui:insert></title>
+		
+	<!-- Bootstrap CSS -->
+	<h:outputStylesheet name="bootstrap/css/bootstrap.min.css" />
+	
+	<!-- custom CSS -->
+	<h:outputStylesheet name="assets/css/style.css" />
+	<ui:insert name="css_custom"></ui:insert>	
+</h:head>
+
+<h:body>
+	
+	<!-- MENU -->	
+	<ui:insert name="menu" >
+      <ui:include src="menu_external.xhtml" />
+   	</ui:insert>
+
+	
+
+	<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-8 blog-main">
+			
+			<!-- CONTENIDO -->
+			<ui:insert name="content"></ui:insert>
+			
+		</div>
+		<!-- /.blog-main -->
+
+		<aside class="col-md-4 blog-sidebar">
+			<div class="p-3 mb-3 bg-light rounded">
+				<h4 class="font-italic">About</h4>
+				<p class="mb-0">
+					Programador java junior en etapa de desarrollo, especialidad en backend javaEE
+					Soy emprendedor de sueños, forjando un mejor futuro cada día. Amante y muy apasionado 
+					de la programación. Todos los días se aprende algo nuevo. 
+				</p>
+			</div>
+
+			<div class="p-3">
+				<h4 class="font-italic">Archives</h4>
+				<ol class="list-unstyled mb-0">
+					<li><a href="#">March 2014</a></li>
+					<li><a href="#">February 2014</a></li>
+					<li><a href="#">January 2014</a></li>
+					<li><a href="#">December 2013</a></li>
+					<li><a href="#">November 2013</a></li>
+					<li><a href="#">October 2013</a></li>
+					<li><a href="#">September 2013</a></li>
+					<li><a href="#">August 2013</a></li>
+					<li><a href="#">July 2013</a></li>
+					<li><a href="#">June 2013</a></li>
+					<li><a href="#">May 2013</a></li>
+					<li><a href="#">April 2013</a></li>
+				</ol>
+			</div>
+
+			<div class="p-3">
+				<h4 class="font-italic">Elsewhere</h4>
+				<ol class="list-unstyled">
+					<li><a href="https://github.com/doriandarren">GitHub</a></li>
+				</ol>
+			</div>
+		</aside>
+		<!-- /.blog-sidebar -->
+
+	</div>
+	<!-- /.row --> 
+	</main>
+	<!-- /.container -->
+	
+	<!-- FOOTER -->
+	<footer class="text-muted">
+		<div class="container">		
+		<button class="btn btn-default float-right">
+			<a href="#">Back to top</a>
+		</button>
+		<p>© Copyright 2018 Intelligence Bit - All Rights Reserved</p>
+		</div>
+    </footer>	
+	<!-- jQuery first, then Bootstrap JS -->	
+	<h:outputScript name="jquery/jquery.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<h:outputScript name="bootstrap/js/bootstrap.min.js" />
+
+	<!-- JS Custom -->
+	<ui:insert name="js_custom"></ui:insert>
+
+</h:body>
+</html>

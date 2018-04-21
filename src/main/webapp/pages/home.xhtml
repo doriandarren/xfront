@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+	<ui:composition template="/WEB-INF/template/layout_session.xhtml">
+		    
+	    <ui:define name="title">Home</ui:define>
+	    
+	    <ui:define name="content">
+	        
+	        <div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						  
+							    			
+						<h1>Welcome</h1>
+						<h3>Email: #{accountController.user.email}</h3>
+						<h3>Full Name: #{accountController.user.fullName}</h3>
+						<hr />
+						<h3>Email de sesion: <h:outputText value="#{sessionScope.email}" /></h3>						
+						<h3>Email de sesion: <h:outputText value="#{sessionScope.full_name}" /></h3>	    
+				    </div>	    
+				</div>
+			</div>
+	    </ui:define>    
+	</ui:composition>
+</html>

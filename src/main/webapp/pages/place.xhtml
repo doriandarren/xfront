@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+<ui:composition template="/WEB-INF/template/layout_session.xhtml">
+
+	<ui:define name="title">Place</ui:define>
+
+    <ui:define name="content">	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Place </h1>
+			</div>		
+		</div>	
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+			
+			<a type="button" class="btn btn-outline-success" href="javascript:;" onclick="getAllClient();return false;">Load Client</a>			
+						
+											
+			<div id="result" class="" role="alert"></div>		
+							
+			<h:form id="form">
+			
+			  <h:inputHidden id="id" class="form-control"></h:inputHidden>
+			  
+			  
+			  <h:selectOneMenu id="cliente_id"></h:selectOneMenu>
+			  
+			  <div class="form-group row">
+			  	<h:outputLabel value="Name" class="col-2 col-form-label"/>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.name}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="name" class="form-control"></h:inputText>
+					<h:message for="name" class="error_message"></h:message>
+				</div>
+			  </div>
+			  
+			  
+			  <div class="form-group row">
+				<label for="address" class="col-2 col-form-label">Address</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.address}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="address" class="form-control"></h:inputText>
+					<h:message for="address" class="error_message"></h:message>			
+				</div>
+			  </div>
+			  
+			  <div class="form-group row">
+				<label for="description" class="col-2 col-form-label">Description</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.description}"
+									id="description" class="form-control"></h:inputText>
+				</div>
+			  </div>
+			  	
+			  <div class="form-group row">
+				<label for="phone" class="col-2 col-form-label">Phone</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.phone}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="phone" class="form-control"></h:inputText>
+					<h:message for="phone" class="error_message"></h:message>			
+				</div>
+			  </div>
+			  			  
+			  <div class="form-group row">
+				<label for="email" class="col-2 col-form-label">Email</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.email}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="email" class="form-control"></h:inputText>
+					<h:message for="email" class="error_message"></h:message>			
+				</div>
+			  </div>
+			  	
+			  <div class="form-group row">
+				<label for="codeZip" class="col-2 col-form-label">Code Zip</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.codeZip}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="codeZip" class="form-control"></h:inputText>
+					<h:message for="codeZip" class="error_message"></h:message>			
+				</div>
+			  </div>
+			  	
+			  <div class="form-group row">
+				<label for="city" class="col-2 col-form-label">City</label>
+				<div class="col-10">
+					<h:inputText value="#{placeBean.city}" required="true" 
+								requiredMessage="Plesase, fill this field"
+								id="city" class="form-control"></h:inputText>
+					<h:message for="city" class="error_message"></h:message>			
+				</div>
+			  </div>
+			  	
+			  <div class="form-group row">
+				<div class="col-12">
+				   <a type="button" class="btn btn-outline-success" href="javascript:;" onclick="save();return false;">Save</a>
+				   <a type="button" class="btn btn-outline-primary" href="javascript:;" onclick="update();return false;">Update</a>
+				</div>
+			  </div>			  
+			  			  
+			</h:form>
+			
+			
+			
+			</div>			
+		</div>
+	</div>	
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<a type="button" href="#get_all" onclick="getAll();return false;">Find</a>
+				<div id="res_all"></div>	
+			</div>			
+		</div>
+	</div>	
+		
+	</ui:define>
+	
+    <ui:define name="css_custom">    	
+		<script src="../resources/pages/place/place.js"></script>
+    </ui:define>
+    
+</ui:composition>
+</html>

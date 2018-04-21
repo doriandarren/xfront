@@ -1,0 +1,25 @@
+<ui:composition template="/WEB-INF/template/layout_session.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    >
+	
+	<ui:define name="title">Form</ui:define>
+
+    <ui:define name="content">
+        <div class="container">
+			<div class="row">
+				<div class="col-sm-12">	
+					<h1>Google App Engine + JSF 2.0 example - hello.xhtml</h1>
+					<h2>Form</h2>
+					<h:form >
+						<h:inputText value="#{helloBean.name}"></h:inputText>
+						<h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+					</h:form>
+				</div>			
+			</div>
+		</div>
+    </ui:define>
+    
+</ui:composition>
